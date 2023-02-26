@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*------------------------------- Header Section -----------------------------------*/
+
+header {
+  max-width: 100%;
+  background-color: rgb(227, 213, 213);
+  padding: 1em;
+}
+
+header h1 {
+  opacity: 0;
+}
+
+header img {
+  max-width: 100%;
+  display: flex;
+  margin-bottom: 0em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+
+#navbar {
+  /*border: 3px rgb(44, 134, 43) solid;*/
+  /*border-radius: 1em;*/
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+}
+
+#navbar img {
+  /*logo img*/
+  /*border: 3px rgb(72, 55, 145) solid;*/
+  width: 12em;
+  margin-left: 0;
+}
+
+#navbarNavAltMarkup {
+  /*background-color: rgb(132, 122, 122);*/
+  justify-content: flex-end;
+}
+
+#navbar a {
+  /*border: 1px red solid;*/
+  font-size: 1.5em;
+  color: rgb(98, 91, 91);
+}
+
+/*------------------------------- Main Section -----------------------------------*/
+
+main {
+  background-color: rgb(227, 213, 213);
+  /*background-color: rgb(146, 37, 37);*/
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/*------------------------------- Footer Section -----------------------------------*/
+
+footer {
+  max-height: 0.1em;
+}
+
+.social-icon {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(52, 55, 55);
+  color: white;
+  font-size: 1.3em;
+  padding: 1em;
+  gap: 2em;
+  word-wrap: break-word;
+}
+
+.social-icon img {
+  width: 2em;
+}
+
+/*------------------------------- Details Section -----------------------------------*/
+
+.card-container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+}
+
+.bg-image {
+  margin-right: 1rem;
+}
+.card-container {
+  /*background-color: brown;*/
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5em;
+}
+
+.big-card-img {
+  flex-basis: 50%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  background-image: url(.././assets/cinema.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 90%;
+  max-height: 100%;
+  border-radius: 0.5em;
+}
+
+.big-card-img img {
+  display: none;
+}
+
+.big-card-body {
+  flex-basis: 50%;
+  background-color: rgb(170, 193, 212);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  margin-right: 1rem;
+  height: 90%;
+  max-height: 100%;
+}
+
+.big-card-title {
+  color: rgb(124, 118, 118);
+  font-size: 2em;
+  margin-left: 0.2em;
+  margin-top: 1rem;
+  max-height: 50%;
+}
+
+.big-card-text {
+  /*background-color: rgb(68, 61, 61);*/
+  color: rgb(255, 255, 255);
+  display: flex;
+  min-height: 40vh;
+  max-height: 50vh;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  overflow: auto;
+}
+
+#big-card-button {
+  /*color: red;*/
+  /*background-color: brown; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  padding: 0em;
+  width: 90%;
+  max-height: 50%;
+}
+
+/*------------------------------- Previous / Next Section -----------------------------------*/
+
+#actualpage {
+  text-align: center;
+}
+
+.arrows {
+  background-color: rgb(159, 147, 147);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+#previous-page,
+#next-page {
+  max-width: 3em;
+  border: none;
+}
+
+.arrows h2 {
+  color: rgb(255, 255, 255);
+  font-size: 3.5em;
+}
+
+.arrows button {
+  border-radius: 1em;
+}
+
+/*------------------------------- Cards Section -----------------------------------*/
+
+.card,
+.card-img-top {
+  height: 10em;
+  object-fit: cover;
+}
+
+#cards-container {
+  /*background-color: green;*/
+  max-width: 100%;
+  padding: 1em;
+}
+
+.card-body p {
+  color: rgb(130, 125, 125);
+}
+
+/*------------------------------- Stats Section -----------------------------------*/
+
+table {
+  padding-top: 10em;
+}
+
+#stats-table {
+  border: 2px rgb(99, 102, 99) solid;
+  background-color: rgb(255, 255, 255);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#stats-table th {
+  background-color: rgb(83, 83, 90);
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+}
+
+.table-subtitle {
+  font-weight: bold;
+  color: rgb(72, 67, 75);
+}
+
+/*------------------------------- Contact Section -----------------------------------*/
+
+hr {
+  width: 60vw;
+}
+
+#contact {
+  /* background-color: brown;*/
+  max-width: 100%;
+}
+
+#contact button {
+  max-width: 100%;
+  margin-top: 1em;
+  padding: 0.4em;
+  font-size: 1.2em;
+}
+
+#contactform {
+  /* background-color: green;*/
+  /*border: 2px red solid;*/
+  /* color: white;*/
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  align-items: center;
+  text-align: left;
+}
+
+#exampleInputName2,
+#exampleInputEmail2,
+#exampleInputText {
+  /*background-color: blue;*/
+  /*color: white;*/
+  max-width: 100%;
+  min-width: 60vw;
+  max-height: 15em;
+}
+
+/*------------------------------- Media queries -----------------------------------*/
+
+/* Mobile screen */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  .header {
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu-icon i {
+    margin-right: 5px;
+  }
+
+  .content {
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar li {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+footer {
+  font-size: 14px;
+  width: auto;
+}
+
+/* Tablet screen */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header {
+    height: 80px;
+    padding: 20px;
+  }
+
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu-icon i {
+    margin-right: 5px;
+  }
+
+  .content {
+    padding: 30px;
+    text-align: justify;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar li {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+/* Pc Screen */
+@media only screen and (min-width: 992px) {
+  .header {
+    height: 100px;
+    padding: 20px;
+  }
+
+  .logo img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .nav {
+    display: block;
+    float: right;
+    margin-top: 30px;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .content {
+    padding: 50px;
+    text-align: justify;
+  }
+
+  .sidebar {
+    width: 25%;
+    float: left;
+    padding: 50px;
+  }
+
+  .sidebar ul {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .sidebar li {
+    width: 100%;
+    text-align: left;
+  }
+}
