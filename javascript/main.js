@@ -1,3 +1,5 @@
+/*   Previous/Next Pages Configuration   */
+
 const h1 = document.querySelector("h1");
 const h2 = document.querySelector("#actualpage");
 
@@ -31,4 +33,11 @@ function nextPage() {
 previousBtn.addEventListener("click", previousPage);
 nextBtn.addEventListener("click", nextPage);
 
-  
+/*   Hamburger Menu   */
+
+const navbarToggler = document.querySelector(".navbar-toggler");
+const navbarCollapse = document.querySelector(".navbar-collapse");
+
+navbarToggler.addEventListener("click", () => {
+  navbarCollapse.classList.toggle("show");
+});

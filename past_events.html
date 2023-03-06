@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Amazing Events</title>
+    <title>Past Events - Amazing Events</title>
 </head>
 
 <body>
     <header>
         <h1>Past Events</h1>
-        <div class="col-sm-12"> <a href="./index.html" id="logo"></a>
-            <img src="./assets/logo_amazing_events.png" alt="Amazing Events Logo">
+        <div class="col-sm-12">
+            <img src="./assets/logo_header_amazing_events.png" alt="Amazing Events Logo" id="main-logo">
         </div>
         <div class="col-sm-12">
             <nav class="navbar navbar-expand-lg navbar-light " id="navbar">
@@ -40,109 +40,74 @@
         <!-- Previous / Next Pages -->
         <div class="arrows">
             <button onClick="previous()" id="previous-page">
-                <img src="./assets/arrow_left.png" alt="">
+                <img src="./assets/arrow_left.png" alt="Previous page arrow">
             </button>
             <h2 id="actualpage">""</h2>
             <button onClick="next()" id="next-page">
-                <img src="./assets/arrow_right.png" alt="">
+                <img src="./assets/arrow_right.png" alt="Next page arrow">
             </button>
         </div>
     </header>
 
     <!-- Search Bar -->
     <main>
-        <div class="container d-flex  justify-content-end p-3">
+        <div class="container d-flex  justify-content-end p-3" id="checkbox-container">
             <div class="container col-lg-8 col-md-12 col-sm-12" id="checkbox">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">Category</label>
+                    <label class="form-check-label" for="inlineCheckbox1">Book Exchange</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">Category</label>
+                    <label class="form-check-label" for="inlineCheckbox2">Cinema</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                    <label class="form-check-label" for="inlineCheckbox3">Category</label>
+                    <label class="form-check-label" for="inlineCheckbox3">Costume Party</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                    <label class="form-check-label" for="inlineCheckbox4">Category</label>
+                    <label class="form-check-label" for="inlineCheckbox4">Food Fair</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                    <label class="form-check-label" for="inlineCheckbox5">Category</label>
+                    <label class="form-check-label" for="inlineCheckbox5">Museum</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+                    <label class="form-check-label" for="inlineCheckbox6">Music Concert</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+                    <label class="form-check-label" for="inlineCheckbox7">Race</label>
                 </div>
             </div>
             <div class="container d-flex-end col-lg-4 col-md-12" id="search">
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" aria-label="Search">
-                    <button class="btn btn-secondary" type="submit">Search</button>
+                    <button class="btn btn-secondary" type="submit" id="search-button">Search</button>
                 </form>
             </div>
         </div>
 
-        <!--  Display Cards -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="cards-container">
-            <div class="col">
-                <div class="card">
-                    <img class="card-img-top" src="./assets/museum_tour.jpg" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Museum Tour</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">More Info</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img class="card-img-top" src="./assets/food_fair.jpg" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Food Fair</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">More Info</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="./assets/marathon.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Marathon</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">More Info</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="./assets/cinema.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Cinema</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">More Info</a>
-                    </div>
-                </div>
-            </div>            
+        <!-- Dynamic Display Cards -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4" id="cards-container">
         </div>
     </main>
 
     <!-- footer -->
     <footer>
         <div class="social-icon">
-            <a href="#"><img src="./assets/instagram.png" title="Instagram"></a>
-            <a href="#"><img src="./assets/facebook.png" title="Facebook"></a>
-            <a href="#"><img src="./assets/whatsapp.png" title="WhatsApp"></a>
+            <a href="#"><img src="./assets/instagram.png" title="Instagram" alt="Instagram Logo"></a>
+            <a href="#"><img src="./assets/facebook.png" title="Facebook" alt="Facebook Logo"></a>
+            <a href="#"><img src="./assets/whatsapp.png" title="WhatsApp" alt="Whatsapp Logo"></a>
             <p>© MindHub 2023 | FrontEnd | Otavio Rodrigues Oliveira | Cohorte FE15-TM-M2</p>
         </div>
     </footer>
 
     <!--Scripts-->
-    <script src="./main.js"></script>
+    <script type="module" src="./javascript/main.js"></script>
+    <script type="module" src="./javascript/past_events.js"></script>
 </body>
 
 </html>
