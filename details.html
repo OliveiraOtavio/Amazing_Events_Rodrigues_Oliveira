@@ -39,52 +39,35 @@
 
         <!-- Previous / Next Pages -->
         <div class="arrows">
-            <button onClick="previous()" id="previous-page">
+            <button onClick="previousPage()" id="previous-page">
                 <img src="./assets/arrow_left.png" alt="Previous page arrow">
             </button>
             <h2 id="actualpage">""</h2>
-            <button onClick="next()" id="next-page">
+            <button onClick="nextPage()" id="next-page">
                 <img src="./assets/arrow_right.png" alt="Next page arrow">
             </button>
         </div>
     </header>
-
-    <!--  Details Card (Static) -->
-    <main>
-        <div class="detail-card-container">
-            <div class="big-card-img" data-mdb-ripple-color="light">
-                <img src="./assets/costume_party.jpg" class="img-fluid" alt="">
-                <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                </a>
-            </div>
-            <div class="big-card-body">
-                <h5 class="big-card-title">Card title</h5>
-                <p class="big-card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda perspiciatis sequi nihil magni
-                    delectus iusto dolore quaerat, earum eos doloribus vero exercitationem odio eum doloremque error ab
-                    molestiae? Velit nulla perspiciatis fuga quas recusandae voluptatum, cumque officia! Maxime, magni
-                    dolore ipsam nobis quisquam aliquid iusto ipsa debitis aliquam natus dicta omnis perspiciatis sunt
-                    exercitationem culpa distinctio tempore dignissimos sequi? Sint nemo officia mollitia explicabo sed
-                    obcaecati vel nisi temporibus inventore?
-                    <a href="./index.html" class="btn btn-primary" id="big-card-button">Return</a>
-                </p>
-            </div>
+    
+    <main>        
+        <!--  Dynamic Display Cards -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4" id="detail-card-container">
         </div>
     </main>
 
     <!-- Footer -->
     <footer>
         <div class="social-icon">
-            <a href="#"><img src="./assets/instagram.png" title="Instagram" alt="Instagram Logo"></a>
-            <a href="#"><img src="./assets/facebook.png" title="Facebook" alt="Facebook Logo"></a>
-            <a href="#"><img src="./assets/whatsapp.png" title="WhatsApp" alt="Whatsapp Logo"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="./assets/instagram.png" title="Instagram" alt="Instagram Logo"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="./assets/facebook.png" title="Facebook" alt="Facebook Logo"></a>
+            <a href="https://www.whatsapp.com/" target="_blank"><img src="./assets/whatsapp.png" title="WhatsApp" alt="Whatsapp Logo"></a>
             <p>© MindHub 2023 | FrontEnd | Otavio Rodrigues Oliveira | Cohorte FE15-TM-M2</p>
         </div>
     </footer>
 
     <!--Scripts-->
     <script type="module" src="./javascript/main.js"></script>
+    <script type="module" src="./javascript/details.js"></script>
 </body>
 
 </html>

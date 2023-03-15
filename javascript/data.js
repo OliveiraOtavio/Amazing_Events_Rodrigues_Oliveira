@@ -22,7 +22,7 @@ var data = {
         "category":"Food Fair",
         "place":"Room A",
         "capacity":45000,
-        "assistance":42756,
+        "estimate":42000,
         "price":10
       },
       {
@@ -30,7 +30,7 @@ var data = {
         "image":"https://i.postimg.cc/GmHRkbNV/Jurassic-Park.jpg",
         "name":"Jurassic Park",
         "date":"2021-11-02",
-        "description":"Let's go meet the biggest dinosaurs in the paleontology museum.",
+        "description":"Lets go meet the biggest dinosaurs in the paleontology museum.",
         "category":"Museum",
         "place":"Field",
         "capacity":82000,
@@ -80,8 +80,8 @@ var data = {
         "date":"2022-01-22",
         "description":"The only concert of the most emblematic band in the world.",
         "category":"Music Concert",
-        "place":"Room A"
-        ,"capacity":138000,
+        "place":"Room A",
+        "capacity":138000,
         "estimate":138000,
         "price":150
       },
@@ -114,11 +114,11 @@ var data = {
         "image":"https://i.postimg.cc/zv67r65z/15kny.jpg",
         "name":"15K NY",
         "date":"2022-03-01",
-        "description":"We'll be raising funds for hospitals and medical care in this unique event held in The Big Apple.",
+        "description":"We will be raising funds for hospitals and medical care in this unique event held in The Big Apple.",
         "category":"Race",
         "place":"New York",
         "capacity":3000000,
-        "assistance":2569800,
+        "estimate":2560000,
         "price":3
         },
       {
@@ -138,7 +138,7 @@ var data = {
         "image":"https://i.postimg.cc/05FhxHVK/book4.jpg",
         "name":"Just for your kitchen",
         "date":"2021-11-09",
-        "description":"If you're a gastronomy lover come get the cookbook that best suits your taste and your family's.",
+        "description":"If you are a gastronomy lover come get the cookbook that best suits your taste and your family.",
         "category":"Book Exchange",
         "place":"Room D6",
         "capacity":130000,
@@ -162,13 +162,13 @@ var data = {
         "image":"https://i.postimg.cc/T3C92KTN/scale.jpg",
         "name":"Avengers",
         "date":"2022-10-15",
-        "description":"Marvel's Avengers Premier in 3d, the start of an epic saga with your favourite superheroes.",
+        "description":"Marvels Avengers Premier in 3d, the start of an epic saga with your favourite superheroes.",
         "category":"Cinema",
         "place":"Room D1",
         "capacity":9000,
         "estimate":9000,
         "price":250
-      }
+      },
     ]
   };
 

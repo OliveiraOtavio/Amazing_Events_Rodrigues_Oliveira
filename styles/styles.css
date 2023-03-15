@@ -157,6 +157,17 @@ main {
   border: 0;
 }
 
+#no-events {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 20vh;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 /*------------------------------- Footer Section -----------------------------------*/
 
 footer {
@@ -198,85 +209,77 @@ footer {
 
 /*------------------------------- Details Section -----------------------------------*/
 
-.detail-card-container {
-  height: 60vh;
+ /* #detail-card-container {
+  height: 100vh;
   max-width: 90%;
   border-radius: 0.5em;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: rgba(247, 247, 247, 0.6);
-}
+  background-color: rgb(108, 37, 37);  
+}  */
 
-.bg-image {
-  margin-right: 1rem;
-}
-
-.big-card-img {
-  flex-basis: 50%;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  background-image: url(.././assets/cinema.jpg);
-  background-size: cover;
-  background-position: center center;
-  height: 90%;
-  max-height: 100%;
-  border-radius: 0.5em;
-}
-
-.big-card-img img {
-  display: none;
-}
-
-.big-card-body {
-  flex-basis: 50%;
-  background-color: rgba(0, 0, 0, 0.8);
+#detail-card-body {  
+  background-color: rgb(255, 255, 255);
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  justify-content: center;
-  margin-right: 1rem;
+  justify-content: center;  
   height: 90%;
   max-height: 100%;
+  min-width: 40vw;
+  max-width: 90vw;  
+  padding-bottom: 1em;
+  margin-bottom: 2em;
 }
 
-.big-card-title {
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  margin-left: 0.6em;
-  margin-top: 1rem;
-  max-height: 50%;
+#detail-card-container capacity {
+  display: contents;   
 }
 
-.big-card-text {
-  /*background-color: rgb(68, 61, 61);*/
-  color: rgb(255, 255, 255);
+#detail-card-container assistance {
+  display: contents;   
+}
+
+#detail-card-container estimate {
+  display: contents;   
+}
+
+
+#detail-card-container { 
   display: flex;
-  min-height: 40vh;
-  max-height: 50vh;
-  padding: 0.5em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  overflow: auto;
-}
-
-#big-card-button {
-  /*color: red;*/
-  /*background-color: brown; */
-  display: flex;
-  align-items: center;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  padding: 0.3em;
-  width: 100%;
-  max-height: 50%;
+  margin: 0;
+} 
+
+#detail-card-container price { 
+  color: rgb(63, 90, 164);
+  font-weight: bold;  
 }
+
+/* #detail-card-container capacity {
+  color: red;  
+}
+
+#detail-card-container estimate {
+  color: green;  
+} */
+
+#detail-card-container img {    
+  border-radius: 0.5em;
+  max-height: 70vh;
+  object-fit: cover; 
+  margin-bottom: 1em;
+}
+
+#buy-tickets-button, #event-has-passed {  
+  margin-top: 1em;
+  font-weight: bold;
+}
+
 
 /*------------------------------- Cards Section -----------------------------------*/
 
@@ -305,6 +308,18 @@ footer {
   border: 0;
 }
 
+#card-body {
+  background-color: rgba(196, 194, 194, 0.8);
+  min-width: 18.2em;
+  max-width: 22em;
+}
+
+#card-body:hover {
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+
 .card h2 {
   /* text-align: center; */
   color: rgb(67, 67, 67);
@@ -327,7 +342,10 @@ footer {
 .card price,
 category,
 place,
-date {
+date,
+capacity,
+assistance,
+estimate {
   color: rgb(67, 67, 67);
   font-weight: bold;
 }
@@ -342,16 +360,12 @@ date {
   overflow: auto;
 }
 
-#card-body {
-  background-color: rgba(196, 194, 194, 0.8);
-  min-width: 18.2em;
-  max-width: 22em;
+.card capacity, assistance, estimate {
+  display: none;
 }
 
-#card-body:hover {
-  background-color: rgb(255, 255, 255);
-  transition: 0.3s;
-}
+
+
 
 /*------------------------------- Stats Section -----------------------------------*/
 
