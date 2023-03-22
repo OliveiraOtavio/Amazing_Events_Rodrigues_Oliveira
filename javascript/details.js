@@ -1,4 +1,4 @@
-import { data } from "./data.js";
+const apiUrl = "https://mindhub-xj03.onrender.com/api/amazing";
 
 function hasProperty(event, property) {
   return event.hasOwnProperty(property) && event[property];
@@ -42,14 +42,34 @@ function generateDetailsHTML(eventData, currentDate) {
   return detailsHTML;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Get event data from selected event on localStorage //
+async function fetchData() {
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return null;
+  }
+}
+
+async function displayEventDetails() {
+  // Fetch data from the API
+  const data = await fetchData();
+  if (!data) return;
+
+  // Get event data from selected event on localStorage
   const eventData = JSON.parse(localStorage.getItem("selectedEvent"));
 
-  // Get current date of event //
+  // Get current date of event
   const currentDate = new Date(data.currentDate);
 
-  // Display Detail Card with the corresponding button based on the event date //
+  // Display Detail Card with the corresponding button based on the event date
   const container = document.querySelector("#detail-card-container");
   container.innerHTML = generateDetailsHTML(eventData, currentDate);
-});
+}
+
+document.addEventListener("DOMContentLoaded", displayEventDetails);
