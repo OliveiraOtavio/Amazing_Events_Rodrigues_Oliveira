@@ -97,12 +97,14 @@ export function handleBookNowButtonClick(containerElement) {
 
 /*   Checkboxes and Search COnfiguration  */
 
+// main.js
 export function showCheckboxCategories(
   data,
   container,
   checkboxContainer,
   searchForm,
-  searchInput
+  searchInput,
+  isPastEvent
 ) {
   // Map events by category
   const categories = data.events.reduce((acc, event) => {
@@ -136,26 +138,28 @@ export function showCheckboxCategories(
       // Map checked categories
       const selectedCategories = Array.from(
         checkboxContainer.querySelectorAll("input:checked")
-      ).map((input) => input.value); // If there is no category selected, display all cards
-      if (selectedCategories.length === 0) {
-        container.innerHTML = generateCardsHTML(data.events);
-      } else {
-        // Add "all" option
-        if (selectedCategories.includes("all")) {
-          container.innerHTML = generateCardsHTML(data.events);
-        } else {
-          // Filter events by selected categories
-          const filteredEvents = data.events.filter((event) =>
-            selectedCategories.includes(event.category)
-          );
-          // Display cards by filtered events
-          const filteredCardsHTML = generateCardsHTML(filteredEvents);
-          // Update cards container
-          container.innerHTML = filteredCardsHTML;
-        }
-      }
-    });
+      ).map((input) => input.value);
 
+      const filteredEvents = data.events.filter((event) => {
+        const eventDate = new Date(event.date);
+        const currentDate = new Date();
+        const isEventValid =
+    isPastEvent === null
+      ? true
+      : isPastEvent
+      ? eventDate < currentDate
+      : eventDate >= currentDate;
+
+        return (
+          isEventValid &&
+          (selectedCategories.length === 0 ||
+            selectedCategories.includes(event.category) ||
+            selectedCategories.includes("all"))
+        );
+      });
+
+      container.innerHTML = generateCardsHTML(filteredEvents);
+    });
     // Search function handler
     function handleSearch(searchTerm) {
       // Map selected categories
@@ -165,13 +169,19 @@ export function showCheckboxCategories(
 
       // Filter events by selected categories and search terms
       const filteredEvents = data.events.filter((event) => {
+        const eventDate = new Date(event.date);
+        const currentDate = new Date();
+        const isEventValid = isPastEvent
+          ? eventDate < currentDate
+          : eventDate >= currentDate;
+
         const eventName = event.name.toLowerCase();
         const matchesSearchTerm = eventName.includes(searchTerm);
         const isCategorySelected =
           selectedCategories.length === 0 ||
           selectedCategories.includes(event.category) ||
           selectedCategories.includes("all");
-        return matchesSearchTerm && isCategorySelected;
+        return matchesSearchTerm && isCategorySelected && isEventValid;
       });
 
       // If there are no events that match the search, display alert

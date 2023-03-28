@@ -27,7 +27,8 @@ async function loadCards() {
     indexContainer,
     checkboxContainer,
     searchForm,
-    searchInput
+    searchInput,
+    null // to be able to select all events, upcoming or past.
   );
 
   // Call the handleBookNowButtonClick() function to handle the "More Info" button clicks
