@@ -143,6 +143,7 @@ export function showCheckboxCategories(
       const filteredEvents = data.events.filter((event) => {
         const eventDate = new Date(event.date);
         const currentDate = new Date();
+
         const isEventValid =
     isPastEvent === null
       ? true
@@ -171,7 +172,10 @@ export function showCheckboxCategories(
       const filteredEvents = data.events.filter((event) => {
         const eventDate = new Date(event.date);
         const currentDate = new Date();
-        const isEventValid = isPastEvent
+        const isEventValid =
+        isPastEvent === null
+          ? true
+          : isPastEvent
           ? eventDate < currentDate
           : eventDate >= currentDate;
 
